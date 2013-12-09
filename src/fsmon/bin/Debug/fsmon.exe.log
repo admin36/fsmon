@@ -1,0 +1,221 @@
+10/26/2013 8:53:41 AM  FSMON Starting
+10/26/2013 8:53:41 AM  Working Directory 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug'
+10/26/2013 8:53:41 AM  Loading Configuration File: 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug\config.xml'
+10/26/2013 8:53:41 AM  Watch Rules Located: 1
+10/26/2013 8:53:41 AM  Configuring Watch Rule: 'ExampleWatchRule'
+10/26/2013 8:53:41 AM  Starting Filesystem Watchers...
+10/26/2013 8:54:35 AM  FSMON Starting
+10/26/2013 8:54:35 AM  Working Directory 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug'
+10/26/2013 8:54:35 AM  Loading Configuration File: 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug\config.xml'
+10/26/2013 8:54:35 AM  Watch Rules Located: 1
+10/26/2013 8:54:35 AM  Configuring Watch Rule: 'ExampleWatchRule'
+10/26/2013 8:54:35 AM  Starting Filesystem Watchers...
+10/26/2013 8:54:42 AM DEBUG: File Changed: C:\watchtest\New Text Document (2).txt
+10/26/2013 8:54:42 AM DEBUG: File Changed: C:\watchtest\New Text Document (2).txt
+10/26/2013 8:55:06 AM  FSMON Starting
+10/26/2013 8:55:06 AM  Working Directory 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug'
+10/26/2013 8:55:06 AM  Loading Configuration File: 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug\config.xml'
+10/26/2013 8:55:06 AM  Watch Rules Located: 1
+10/26/2013 8:55:06 AM  Configuring Watch Rule: 'ExampleWatchRule'
+10/26/2013 8:55:06 AM  Starting Filesystem Watchers...
+10/26/2013 8:55:09 AM DEBUG: File Changed: C:\watchtest\New Text Document (2).txt
+10/26/2013 8:55:09 AM DEBUG: File Changed: C:\watchtest\New Text Document (2).txt
+10/26/2013 10:28:54 PM  FSMON Starting
+10/26/2013 10:28:54 PM  Working Directory 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug'
+10/26/2013 10:28:54 PM  Loading Configuration File: 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug\config.xml'
+10/26/2013 10:28:54 PM  Watch Rules Located: 1
+10/26/2013 10:28:54 PM  Configuring Watch Rule: 'ExampleWatchRule'
+10/26/2013 10:28:54 PM  Starting Filesystem Watchers...
+10/26/2013 10:29:01 PM DEBUG: File Created: C:\watchtest\virus - Copy (26) - Copy.exe
+10/26/2013 10:29:01 PM  Matched Conditions for watchitem 'ExampleWatchItem' on 'C:\watchtest\virus - Copy (26) - Copy.exe'. Invoking Actions
+10/26/2013 10:29:01 PM  File Deleted: 'C:\watchtest\virus - Copy (26) - Copy.exe'
+10/26/2013 10:29:01 PM DEBUG: File Does Not Exist: C:\watchtest\virus - Copy (26) - Copy.exe
+10/26/2013 10:29:01 PM DEBUG: File Does Not Exist: C:\watchtest\virus - Copy (26) - Copy.exe
+10/26/2013 10:33:29 PM DEBUG: File Changed: C:\watchtest\New Text Document (2).txt
+10/26/2013 10:33:29 PM DEBUG: File Changed: C:\watchtest\New Text Document (2).txt
+10/26/2013 10:34:26 PM DEBUG: File Created: C:\watchtest\New Text Document (2) - Copy.txt
+10/26/2013 10:34:26 PM DEBUG: File Changed: C:\watchtest\New Text Document (2) - Copy.txt
+10/26/2013 10:34:26 PM DEBUG: File Changed: C:\watchtest\New Text Document (2) - Copy.txt
+10/26/2013 10:38:12 PM  FSMON Starting
+10/26/2013 10:38:12 PM  Working Directory 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug'
+10/26/2013 10:38:12 PM  Loading Configuration File: 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug\config.xml'
+10/26/2013 10:38:12 PM  Watch Rules Located: 1
+10/26/2013 10:38:12 PM  Configuring Watch Rule: 'ExampleWatchRule'
+10/26/2013 10:38:12 PM  Starting Filesystem Watchers...
+10/26/2013 10:38:14 PM DEBUG: File Created: C:\watchtest\New Text Document (3) - Copy.txt
+10/26/2013 10:38:14 PM DEBUG: File Changed: C:\watchtest\New Text Document (3) - Copy.txt
+10/26/2013 10:38:14 PM DEBUG: File Changed: C:\watchtest\New Text Document (3) - Copy.txt
+10/26/2013 10:38:54 PM  FSMON Starting
+10/26/2013 10:38:54 PM  Working Directory 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug'
+10/26/2013 10:38:54 PM  Loading Configuration File: 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug\config.xml'
+10/26/2013 10:38:54 PM  Watch Rules Located: 1
+10/26/2013 10:38:54 PM  Configuring Watch Rule: 'ExampleWatchRule'
+10/26/2013 10:38:54 PM  Starting Filesystem Watchers...
+10/26/2013 10:38:57 PM DEBUG: File Created: C:\watchtest\New Text Document (3) - Copy - Copy.txt
+10/26/2013 10:38:57 PM DEBUG: File Changed: C:\watchtest\New Text Document (3) - Copy - Copy.txt
+10/26/2013 10:38:57 PM DEBUG: File Changed: C:\watchtest\New Text Document (3) - Copy - Copy.txt
+10/26/2013 10:39:30 PM DEBUG: File Renamed: C:\watchtest\test.txt
+10/26/2013 11:02:32 PM  FSMON Starting
+10/26/2013 11:02:32 PM  Working Directory 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug'
+10/26/2013 11:02:32 PM  Loading Configuration File: 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug\config.xml'
+10/26/2013 11:02:32 PM  Watch Rules Located: 1
+10/26/2013 11:02:32 PM  Configuring Watch Rule: 'ExampleWatchRule'
+10/26/2013 11:02:32 PM  Starting Filesystem Watchers...
+10/26/2013 11:03:58 PM  FSMON Starting
+10/26/2013 11:03:58 PM  Working Directory 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug'
+10/26/2013 11:03:58 PM  Loading Configuration File: 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug\config.xml'
+10/26/2013 11:03:58 PM  Watch Rules Located: 1
+10/26/2013 11:03:58 PM  Configuring Watch Rule: 'ExampleWatchRule'
+10/26/2013 11:03:58 PM  Starting Filesystem Watchers...
+10/26/2013 11:04:03 PM DEBUG: File Created: C:\watchtest\test - Copy.txt
+10/26/2013 11:04:03 PM DEBUG: File Changed: C:\watchtest\test - Copy.txt
+10/26/2013 11:04:03 PM DEBUG: File Changed: C:\watchtest\test - Copy.txt
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy (4) - Copy - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy (4) - Copy - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy - Copy - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy - Copy - Copy (2).exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy - Copy - Copy (2).exe
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy - Copy (2) - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy - Copy (2) - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy - Copy (2).exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy - Copy (2).exe
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy - Copy (3).exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy - Copy (3).exe
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy (2) - Copy - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy (2) - Copy - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy - Copy - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy (2) - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy (2) - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy (2) - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy (2) - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy (2).exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy (2).exe
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy (3) - Copy - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy (3) - Copy - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy (3) - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy (3) - Copy - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy (3) - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy (3) - Copy.exe
+10/26/2013 11:04:51 PM DEBUG: File Created: C:\watchtest\virus - Copy (3).exe
+10/26/2013 11:04:51 PM DEBUG: File Changed: C:\watchtest\virus - Copy (3).exe
+10/26/2013 11:05:14 PM  FSMON Starting
+10/26/2013 11:05:14 PM  Working Directory 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug'
+10/26/2013 11:05:14 PM  Loading Configuration File: 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug\config.xml'
+10/26/2013 11:05:14 PM  Watch Rules Located: 1
+10/26/2013 11:05:14 PM  Configuring Watch Rule: 'ExampleWatchRule'
+10/26/2013 11:05:14 PM  Starting Filesystem Watchers...
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy (4) - Copy - Copy - Copy.exe
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy - Copy - Copy - Copy.exe
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy - Copy - Copy (2).exe
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy - Copy - Copy.exe
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy - Copy (2) - Copy.exe
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy - Copy (2).exe
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy - Copy (3).exe
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy - Copy.exe
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy (2) - Copy - Copy - Copy.exe
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy (2) - Copy.exe
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy (2).exe
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy (3) - Copy - Copy - Copy.exe
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy (2) - Copy - Copy.exe
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy (3) - Copy.exe
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy (3).exe
+10/26/2013 11:05:20 PM DEBUG: File Deleted: C:\watchtest\virus - Copy (3) - Copy - Copy.exe
+10/26/2013 11:05:26 PM DEBUG: File Created: C:\watchtest\virus - Copy (2).exe
+10/26/2013 11:05:26 PM  Matched Conditions for watchitem 'ExampleWatchItem' on 'C:\watchtest\virus - Copy (2).exe'. Invoking Actions
+10/26/2013 11:05:26 PM  File Deleted: 'C:\watchtest\virus - Copy (2).exe'
+10/26/2013 11:05:26 PM DEBUG: File Created: C:\watchtest\virus - Copy - Copy - Copy - Copy.exe
+10/26/2013 11:05:26 PM  Matched Conditions for watchitem 'ExampleWatchItem' on 'C:\watchtest\virus - Copy - Copy - Copy - Copy.exe'. Invoking Actions
+10/26/2013 11:05:26 PM  File Deleted: 'C:\watchtest\virus - Copy - Copy - Copy - Copy.exe'
+10/26/2013 11:05:26 PM DEBUG: File Does Not Exist: C:\watchtest\virus - Copy - Copy - Copy - Copy.exe
+10/26/2013 11:05:26 PM DEBUG: File Created: C:\watchtest\virus - Copy - Copy - Copy (2).exe
+10/26/2013 11:05:26 PM  Matched Conditions for watchitem 'ExampleWatchItem' on 'C:\watchtest\virus - Copy - Copy - Copy (2).exe'. Invoking Actions
+10/26/2013 11:05:26 PM  File Deleted: 'C:\watchtest\virus - Copy - Copy - Copy (2).exe'
+10/26/2013 11:05:26 PM DEBUG: File Does Not Exist: C:\watchtest\virus - Copy - Copy - Copy (2).exe
+10/26/2013 11:05:26 PM DEBUG: File Created: C:\watchtest\virus - Copy - Copy - Copy.exe
+10/26/2013 11:05:26 PM  Matched Conditions for watchitem 'ExampleWatchItem' on 'C:\watchtest\virus - Copy - Copy - Copy.exe'. Invoking Actions
+10/26/2013 11:05:26 PM  File Deleted: 'C:\watchtest\virus - Copy - Copy - Copy.exe'
+10/26/2013 11:05:26 PM DEBUG: File Does Not Exist: C:\watchtest\virus - Copy - Copy - Copy.exe
+10/26/2013 11:05:26 PM DEBUG: File Created: C:\watchtest\virus - Copy - Copy (2) - Copy.exe
+10/26/2013 11:05:26 PM  Matched Conditions for watchitem 'ExampleWatchItem' on 'C:\watchtest\virus - Copy - Copy (2) - Copy.exe'. Invoking Actions
+10/26/2013 11:05:26 PM  File Deleted: 'C:\watchtest\virus - Copy - Copy (2) - Copy.exe'
+10/26/2013 11:05:26 PM DEBUG: File Does Not Exist: C:\watchtest\virus - Copy - Copy (2) - Copy.exe
+10/26/2013 11:05:26 PM DEBUG: File Created: C:\watchtest\virus - Copy - Copy (2).exe
+10/26/2013 11:05:26 PM  Matched Conditions for watchitem 'ExampleWatchItem' on 'C:\watchtest\virus - Copy - Copy (2).exe'. Invoking Actions
+10/26/2013 11:05:26 PM  File Deleted: 'C:\watchtest\virus - Copy - Copy (2).exe'
+10/26/2013 11:05:26 PM DEBUG: File Deleted: C:\watchtest\virus - Copy (2).exe
+10/26/2013 11:05:26 PM DEBUG: File Does Not Exist: C:\watchtest\virus - Copy - Copy (2).exe
+10/26/2013 11:05:26 PM DEBUG: File Does Not Exist: C:\watchtest\virus - Copy (2).exe
+10/26/2013 11:05:26 PM DEBUG: File Created: C:\watchtest\virus - Copy - Copy (3).exe
+10/26/2013 11:05:26 PM  Matched Conditions for watchitem 'ExampleWatchItem' on 'C:\watchtest\virus - Copy - Copy (3).exe'. Invoking Actions
+10/26/2013 11:05:26 PM  File Deleted: 'C:\watchtest\virus - Copy - Copy (3).exe'
+10/26/2013 11:05:26 PM DEBUG: File Does Not Exist: C:\watchtest\virus - Copy - Copy (3).exe
+10/26/2013 11:05:26 PM DEBUG: File Deleted: C:\watchtest\virus - Copy - Copy - Copy - Copy.exe
+10/26/2013 11:05:26 PM DEBUG: File Created: C:\watchtest\virus - Copy - Copy.exe
+10/26/2013 11:05:26 PM  Matched Conditions for watchitem 'ExampleWatchItem' on 'C:\watchtest\virus - Copy - Copy.exe'. Invoking Actions
+10/26/2013 11:05:26 PM  File Deleted: 'C:\watchtest\virus - Copy - Copy.exe'
+10/26/2013 11:05:26 PM DEBUG: File Does Not Exist: C:\watchtest\virus - Copy - Copy.exe
+10/26/2013 11:05:26 PM DEBUG: File Created: C:\watchtest\virus - Copy (2) - Copy - Copy - Copy.exe
+10/26/2013 11:05:26 PM  Matched Conditions for watchitem 'ExampleWatchItem' on 'C:\watchtest\virus - Copy (2) - Copy - Copy - Copy.exe'. Invoking Actions
+10/26/2013 11:05:26 PM  File Deleted: 'C:\watchtest\virus - Copy (2) - Copy - Copy - Copy.exe'
+10/26/2013 11:05:26 PM DEBUG: File Does Not Exist: C:\watchtest\virus - Copy (2) - Copy - Copy - Copy.exe
+10/26/2013 11:05:26 PM DEBUG: File Created: C:\watchtest\virus - Copy (2) - Copy - Copy.exe
+10/26/2013 11:05:26 PM  Matched Conditions for watchitem 'ExampleWatchItem' on 'C:\watchtest\virus - Copy (2) - Copy - Copy.exe'. Invoking Actions
+10/26/2013 11:05:26 PM  File Deleted: 'C:\watchtest\virus - Copy (2) - Copy - Copy.exe'
+10/26/2013 11:05:26 PM DEBUG: File Does Not Exist: C:\watchtest\virus - Copy (2) - Copy - Copy.exe
+10/26/2013 11:05:26 PM DEBUG: File Created: C:\watchtest\virus - Copy (2) - Copy.exe
+10/26/2013 11:05:26 PM  Matched Conditions for watchitem 'ExampleWatchItem' on 'C:\watchtest\virus - Copy (2) - Copy.exe'. Invoking Actions
+10/26/2013 11:05:26 PM  File Deleted: 'C:\watchtest\virus - Copy (2) - Copy.exe'
+10/26/2013 11:05:26 PM DEBUG: File Does Not Exist: C:\watchtest\virus - Copy (2) - Copy.exe
+10/26/2013 11:05:26 PM DEBUG: File Deleted: C:\watchtest\virus - Copy - Copy - Copy (2).exe
+10/26/2013 11:05:26 PM DEBUG: File Deleted: C:\watchtest\virus - Copy - Copy - Copy.exe
+10/26/2013 11:05:26 PM DEBUG: File Deleted: C:\watchtest\virus - Copy - Copy (2) - Copy.exe
+10/26/2013 11:05:26 PM DEBUG: File Deleted: C:\watchtest\virus - Copy - Copy (2).exe
+10/26/2013 11:05:26 PM DEBUG: File Deleted: C:\watchtest\virus - Copy - Copy (3).exe
+10/26/2013 11:05:26 PM DEBUG: File Deleted: C:\watchtest\virus - Copy - Copy.exe
+10/26/2013 11:05:26 PM DEBUG: File Deleted: C:\watchtest\virus - Copy (2) - Copy - Copy - Copy.exe
+10/26/2013 11:05:26 PM DEBUG: File Deleted: C:\watchtest\virus - Copy (2) - Copy - Copy.exe
+10/26/2013 11:05:26 PM DEBUG: File Deleted: C:\watchtest\virus - Copy (2) - Copy.exe
+10/26/2013 11:05:34 PM DEBUG: File Renamed: C:\watchtest\test.exe
+10/26/2013 11:05:34 PM  Matched Conditions for watchitem 'ExampleWatchItem' on 'C:\watchtest\test.exe'. Invoking Actions
+10/26/2013 11:05:34 PM  File Deleted: 'C:\watchtest\test.exe'
+10/26/2013 11:05:34 PM DEBUG: File Deleted: C:\watchtest\test.exe
+10/26/2013 11:18:37 PM  FSMON Starting
+10/26/2013 11:18:37 PM  Working Directory 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug'
+10/26/2013 11:18:37 PM  Loading Configuration File: 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug\config.xml'
+10/26/2013 11:18:37 PM  Watch Rules Located: 1
+10/26/2013 11:18:37 PM  Configuring Watch Rule: 'ExampleWatchRule'
+10/26/2013 11:18:37 PM  Starting Filesystem Watchers...
+10/27/2013 12:10:55 AM  FSMON Starting
+10/27/2013 12:10:55 AM  Working Directory 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug'
+10/27/2013 12:10:55 AM  Loading Configuration File: 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug\config.xml'
+10/27/2013 12:10:55 AM  Watch Rules Located: 1
+10/27/2013 12:10:55 AM  Configuring Watch Rule: 'ExampleWatchRule'
+10/27/2013 12:10:55 AM  Starting Filesystem Watchers...
+10/27/2013 12:11:11 AM  FSMON Starting
+10/27/2013 12:11:11 AM  Working Directory 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug'
+10/27/2013 12:11:11 AM  Loading Configuration File: 'C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug\config.xml'
+10/27/2013 12:11:11 AM  Watch Rules Located: 1
+10/27/2013 12:11:11 AM  Configuring Watch Rule: 'ExampleWatchRule'
+10/27/2013 12:11:11 AM  Starting Filesystem Watchers...
+10/28/2013 7:36:17 PM  HALT: Die
+10/28/2013 7:36:38 PM  HALT: Die
+10/28/2013 7:39:21 PM  HALT: Die
+10/28/2013 7:39:29 PM  HALT: Die
+10/28/2013 7:39:46 PM  HALT: Die
+10/28/2013 7:39:48 PM  HALT: Die
+10/28/2013 7:39:50 PM  HALT: Die
+10/28/2013 7:39:53 PM  HALT: Die
+10/28/2013 7:49:01 PM  HALT: Die
+10/28/2013 7:58:29 PM  HALT: Die
+10/28/2013 7:58:55 PM  HALT: Die
+10/28/2013 7:59:02 PM  HALT: Die
+10/28/2013 8:00:09 PM  HALT: Die
+10/28/2013 8:02:06 PM  HALT: Die
+10/28/2013 8:02:18 PM  HALT: Die
+10/29/2013 6:52:40 AM  HALT: No Filesystem Watchers Have Been Configured
+10/29/2013 6:54:03 AM  HALT: No Filesystem Watchers Have Been Configured
+10/29/2013 7:09:03 AM  HALT: Invalid Argument Supplied To Path Flag. Directory Does Not Exist.

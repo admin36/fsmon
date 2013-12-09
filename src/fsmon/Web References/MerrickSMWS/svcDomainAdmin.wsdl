@@ -1,0 +1,2013 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web service handles all functions dealing with domains.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <s:element name="AddDomain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimaryDomainAdminUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimaryDomainAdminPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimaryDomainAdminFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimaryDomainAdminLastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ImapPort" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PopPort" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SmtpPort" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxAliases" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxDomainSizeInMB" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxDomainUsers" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxMailboxSizeInMB" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxMessageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxRecipients" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxDomainAliases" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxLists" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShowDomainAliasMenu" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShowContentFilteringMenu" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShowSpamMenu" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShowStatsMenu" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="RequireSmtpAuthentication" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShowListMenu" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListCommandAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDomainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddDomainResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GenericResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddDomainEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimaryDomainAdminUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimaryDomainAdminPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimaryDomainAdminFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimaryDomainAdminLastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDomainExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddDomainExResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDomainNameAndPath">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldDomainName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewDomainName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewDomainPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDomainNameAndPathResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDomainNameAndPathResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDomainKeysCert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="KeySize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="selector" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateDomainKeysCertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GenerateDomainKeysCertResult" type="tns:DomainKeyResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DomainKeyResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="privateKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="publicKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="selector" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDomainKeysCert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDomainKeysCertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDomainKeysCertResult" type="tns:DomainKeyResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RenameDomain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldDomainName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewDomainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RenameDomainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RenameDomainResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReloadDomain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReloadDomainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReloadDomainResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDomain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ServerIP" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ImapPort" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PopPort" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SmtpPort" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxAliases" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxDomainSizeInMB" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxDomainUsers" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxMailboxSizeInMB" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxMessageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxRecipients" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxDomainAliases" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxLists" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShowDomainAliasMenu" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShowContentFilteringMenu" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShowSpamMenu" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShowStatsMenu" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="RequireSmtpAuthentication" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShowListMenu" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListCommandAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDomainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDomainResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRequestedDomainDefaults">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestedSettings" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRequestedDomainDefaultsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetRequestedDomainDefaultsResult" type="tns:SettingsRequestResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SettingsRequestResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="settingValues" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRequestedDomainSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestedSettings" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRequestedDomainSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetRequestedDomainSettingsResult" type="tns:SettingsRequestResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetRequestedDomainDefaults">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newSettings" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetRequestedDomainDefaultsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetRequestedDomainDefaultsResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetRequestedDomainSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newSettings" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetRequestedDomainSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetRequestedDomainSettingsResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDomain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteFiles" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDomainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteDomainResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllDomainsWithProperties">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PropertyKeys" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllDomainsWithPropertiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAllDomainsWithPropertiesResult" type="tns:GenericPropertyResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GenericPropertyResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="tns:ArrayOfPropertyResultData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPropertyResultData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PropertyResultData" type="tns:PropertyResultData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PropertyResultData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Properties" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllDomains">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllDomainsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAllDomainsResult" type="tns:DomainListResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DomainListResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DomainNames" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDomainCounts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDomainCountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDomainCountsResult" type="tns:DomainCountInfoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DomainCountInfoResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Users" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MailingLists" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Aliases" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Size" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllDomainAliasesWithProperties">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PropertyKeys" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllDomainAliasesWithPropertiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAllDomainAliasesWithPropertiesResult" type="tns:GenericPropertyResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllDomainAliases">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllDomainAliasesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAllDomainAliasesResult" type="tns:DomainAliasInfoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DomainAliasInfoResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DomainAliases" type="tns:ArrayOfDomainAliasInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDomainAliasInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DomainAliasInfo" type="tns:DomainAliasInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DomainAliasInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllDomainUsersWithProperties">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PropertyKeys" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllDomainUsersWithPropertiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAllDomainUsersWithPropertiesResult" type="tns:DomainUserInfoWithPropertiesResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DomainUserInfoWithPropertiesResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Users" type="tns:ArrayOfPropertyResultData" />
+          <s:element minOccurs="0" maxOccurs="1" name="DomainAliases" type="tns:ArrayOfPropertyResultData" />
+          <s:element minOccurs="1" maxOccurs="1" name="CatchAll" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDomainUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDomainUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDomainUsersResult" type="tns:DomainUserInfoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DomainUserInfoResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Users" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="DomainAliases" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="CatchAll" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDomainStatistics">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDomainStatisticsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDomainStatisticsResult" type="tns:StatInfoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StatInfoResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MessagesReceived" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="MessagesSent" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="BytesReceived" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="BytesSent" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="BytesSize" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllDomainStatistics">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllDomainStatisticsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAllDomainStatisticsResult" type="tns:AllDomainStatResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AllDomainStatResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Stats" type="tns:ArrayOfDomainStatInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDomainStatInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DomainStatInfo" type="tns:DomainStatInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DomainStatInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MessagesReceived" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="MessagesSent" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="BytesReceived" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="BytesSent" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="BytesSize" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPrimaryDomainAdmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPrimaryDomainAdminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPrimaryDomainAdminResult" type="tns:PrimaryDomainAdminResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PrimaryDomainAdminResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrimaryAdmin" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetPrimaryDomainAdmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DomainName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AdminUserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetPrimaryDomainAdminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetPrimaryDomainAdminResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDomainDefaults">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDomainDefaultsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDomainDefaultsResult" type="tns:DomainSettingsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DomainSettingsResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServerIP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ImapPort" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PopPort" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SmtpPort" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxAliases" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxDomainAliases" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxLists" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxDomainSizeInMB" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxDomainUsers" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxMailboxSizeInMB" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxMessageSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxRecipients" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShowDomainAliasMenu" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShowContentFilteringMenu" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShowSpamMenu" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShowStatsMenu" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShowListMenu" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="RequireSmtpAuthentication" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListCommandAddress" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DisableDomain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisableDomainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DisableDomainResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnableDomain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnableDomainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EnableDomainResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDomainInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDomainInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDomainInfoResult" type="tns:DomainInfoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DomainInfoResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDomainSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domainName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDomainSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDomainSettingsResult" type="tns:DomainSettingsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDomainForwarding">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeDomains" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDomainForwardingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDomainForwardingResult" type="tns:DomainForwardInfoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DomainForwardInfoResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="blocks" type="tns:ArrayOfDomainForwardBlockInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDomainForwardBlockInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DomainForwardBlockInfo" type="tns:DomainForwardBlockInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DomainForwardBlockInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="blockID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="targetAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="domains" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDomainForwardingBlock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="blockID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDomainForwardingBlockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDomainForwardingBlockResult" type="tns:DomainForwardBlockInfoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DomainForwardBlockInfoResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="domainForwardBlock" type="tns:DomainForwardBlockInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDomainForwardingBlockByTargetAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="targetAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDomainForwardingBlockByTargetAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDomainForwardingBlockByTargetAddressResult" type="tns:DomainForwardBlockInfoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetDomainForwardingBlock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="blockID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="targetAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domains" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetDomainForwardingBlockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetDomainForwardingBlockResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetDomainForwardingBlockByTargetAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="targetAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domains" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetDomainForwardingBlockByTargetAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetDomainForwardingBlockByTargetAddressResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDomainForwardingBlock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="targetAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domains" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDomainForwardingBlockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddDomainForwardingBlockResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDomainForwardingBlock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="blockID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDomainForwardingBlockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteDomainForwardingBlockResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDomainForwardBlockByTargetAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="targetAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDomainForwardBlockByTargetAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteDomainForwardBlockByTargetAddressResult" type="tns:GenericResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetDomainArchiveRule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuthPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameters" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetDomainArchiveRuleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetDomainArchiveRuleResult" type="tns:SettingsRequestResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddDomainSoapIn">
+    <wsdl:part name="parameters" element="tns:AddDomain" />
+  </wsdl:message>
+  <wsdl:message name="AddDomainSoapOut">
+    <wsdl:part name="parameters" element="tns:AddDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddDomainExSoapIn">
+    <wsdl:part name="parameters" element="tns:AddDomainEx" />
+  </wsdl:message>
+  <wsdl:message name="AddDomainExSoapOut">
+    <wsdl:part name="parameters" element="tns:AddDomainExResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDomainNameAndPathSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDomainNameAndPath" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDomainNameAndPathSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDomainNameAndPathResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDomainKeysCertSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateDomainKeysCert" />
+  </wsdl:message>
+  <wsdl:message name="GenerateDomainKeysCertSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateDomainKeysCertResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainKeysCertSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDomainKeysCert" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainKeysCertSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDomainKeysCertResponse" />
+  </wsdl:message>
+  <wsdl:message name="RenameDomainSoapIn">
+    <wsdl:part name="parameters" element="tns:RenameDomain" />
+  </wsdl:message>
+  <wsdl:message name="RenameDomainSoapOut">
+    <wsdl:part name="parameters" element="tns:RenameDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReloadDomainSoapIn">
+    <wsdl:part name="parameters" element="tns:ReloadDomain" />
+  </wsdl:message>
+  <wsdl:message name="ReloadDomainSoapOut">
+    <wsdl:part name="parameters" element="tns:ReloadDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDomainSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDomain" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDomainSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestedDomainDefaultsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRequestedDomainDefaults" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestedDomainDefaultsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRequestedDomainDefaultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestedDomainSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRequestedDomainSettings" />
+  </wsdl:message>
+  <wsdl:message name="GetRequestedDomainSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRequestedDomainSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetRequestedDomainDefaultsSoapIn">
+    <wsdl:part name="parameters" element="tns:SetRequestedDomainDefaults" />
+  </wsdl:message>
+  <wsdl:message name="SetRequestedDomainDefaultsSoapOut">
+    <wsdl:part name="parameters" element="tns:SetRequestedDomainDefaultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetRequestedDomainSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:SetRequestedDomainSettings" />
+  </wsdl:message>
+  <wsdl:message name="SetRequestedDomainSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:SetRequestedDomainSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDomainSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDomain" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDomainSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDomainsWithPropertiesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllDomainsWithProperties" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDomainsWithPropertiesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllDomainsWithPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDomainsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllDomains" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDomainsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllDomainsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainCountsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDomainCounts" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainCountsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDomainCountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDomainAliasesWithPropertiesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllDomainAliasesWithProperties" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDomainAliasesWithPropertiesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllDomainAliasesWithPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDomainAliasesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllDomainAliases" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDomainAliasesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllDomainAliasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDomainUsersWithPropertiesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllDomainUsersWithProperties" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDomainUsersWithPropertiesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllDomainUsersWithPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDomainUsers" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDomainUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainStatisticsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDomainStatistics" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainStatisticsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDomainStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDomainStatisticsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllDomainStatistics" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDomainStatisticsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllDomainStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPrimaryDomainAdminSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrimaryDomainAdmin" />
+  </wsdl:message>
+  <wsdl:message name="GetPrimaryDomainAdminSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPrimaryDomainAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetPrimaryDomainAdminSoapIn">
+    <wsdl:part name="parameters" element="tns:SetPrimaryDomainAdmin" />
+  </wsdl:message>
+  <wsdl:message name="SetPrimaryDomainAdminSoapOut">
+    <wsdl:part name="parameters" element="tns:SetPrimaryDomainAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainDefaultsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDomainDefaults" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainDefaultsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDomainDefaultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DisableDomainSoapIn">
+    <wsdl:part name="parameters" element="tns:DisableDomain" />
+  </wsdl:message>
+  <wsdl:message name="DisableDomainSoapOut">
+    <wsdl:part name="parameters" element="tns:DisableDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnableDomainSoapIn">
+    <wsdl:part name="parameters" element="tns:EnableDomain" />
+  </wsdl:message>
+  <wsdl:message name="EnableDomainSoapOut">
+    <wsdl:part name="parameters" element="tns:EnableDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDomainInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDomainInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDomainSettings" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDomainSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainForwardingSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDomainForwarding" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainForwardingSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDomainForwardingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainForwardingBlockSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDomainForwardingBlock" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainForwardingBlockSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDomainForwardingBlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainForwardingBlockByTargetAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDomainForwardingBlockByTargetAddress" />
+  </wsdl:message>
+  <wsdl:message name="GetDomainForwardingBlockByTargetAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDomainForwardingBlockByTargetAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetDomainForwardingBlockSoapIn">
+    <wsdl:part name="parameters" element="tns:SetDomainForwardingBlock" />
+  </wsdl:message>
+  <wsdl:message name="SetDomainForwardingBlockSoapOut">
+    <wsdl:part name="parameters" element="tns:SetDomainForwardingBlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetDomainForwardingBlockByTargetAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:SetDomainForwardingBlockByTargetAddress" />
+  </wsdl:message>
+  <wsdl:message name="SetDomainForwardingBlockByTargetAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:SetDomainForwardingBlockByTargetAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddDomainForwardingBlockSoapIn">
+    <wsdl:part name="parameters" element="tns:AddDomainForwardingBlock" />
+  </wsdl:message>
+  <wsdl:message name="AddDomainForwardingBlockSoapOut">
+    <wsdl:part name="parameters" element="tns:AddDomainForwardingBlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDomainForwardingBlockSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDomainForwardingBlock" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDomainForwardingBlockSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDomainForwardingBlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDomainForwardBlockByTargetAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDomainForwardBlockByTargetAddress" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDomainForwardBlockByTargetAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDomainForwardBlockByTargetAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetDomainArchiveRuleSoapIn">
+    <wsdl:part name="parameters" element="tns:SetDomainArchiveRule" />
+  </wsdl:message>
+  <wsdl:message name="SetDomainArchiveRuleSoapOut">
+    <wsdl:part name="parameters" element="tns:SetDomainArchiveRuleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="svcDomainAdminSoap">
+    <wsdl:operation name="AddDomain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creates a new domain on the server.</wsdl:documentation>
+      <wsdl:input message="tns:AddDomainSoapIn" />
+      <wsdl:output message="tns:AddDomainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDomainEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creates a new domain using the system's default domain settings.</wsdl:documentation>
+      <wsdl:input message="tns:AddDomainExSoapIn" />
+      <wsdl:output message="tns:AddDomainExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDomainNameAndPath">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Changes the specified domain's name and path.  Data is not copied or moved.  This must be done prior to calling this method.  The recommendation is to disable the domain, copy the data, call this function, then re-enable the domain.  Once it is confirmed that the domain is operating correctly, delete the old path.</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDomainNameAndPathSoapIn" />
+      <wsdl:output message="tns:UpdateDomainNameAndPathSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDomainKeysCert">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Generates a DomainKeys certificate for a domain.</wsdl:documentation>
+      <wsdl:input message="tns:GenerateDomainKeysCertSoapIn" />
+      <wsdl:output message="tns:GenerateDomainKeysCertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainKeysCert">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves the DomainKeys certificate for a domain.</wsdl:documentation>
+      <wsdl:input message="tns:GetDomainKeysCertSoapIn" />
+      <wsdl:output message="tns:GetDomainKeysCertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameDomain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Renames the specified domain in SmarterMail.  Also updates the physical domain data path on the hard drive.</wsdl:documentation>
+      <wsdl:input message="tns:RenameDomainSoapIn" />
+      <wsdl:output message="tns:RenameDomainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReloadDomain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Reloads the settings for the specified domain from disk.</wsdl:documentation>
+      <wsdl:input message="tns:ReloadDomainSoapIn" />
+      <wsdl:output message="tns:ReloadDomainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDomain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates the settings for the specified domain.</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDomainSoapIn" />
+      <wsdl:output message="tns:UpdateDomainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestedDomainDefaults">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the requested default domain settings</wsdl:documentation>
+      <wsdl:input message="tns:GetRequestedDomainDefaultsSoapIn" />
+      <wsdl:output message="tns:GetRequestedDomainDefaultsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestedDomainSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets the settings for the specified domain.</wsdl:documentation>
+      <wsdl:input message="tns:GetRequestedDomainSettingsSoapIn" />
+      <wsdl:output message="tns:GetRequestedDomainSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRequestedDomainDefaults">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates the default settings for domains.</wsdl:documentation>
+      <wsdl:input message="tns:SetRequestedDomainDefaultsSoapIn" />
+      <wsdl:output message="tns:SetRequestedDomainDefaultsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRequestedDomainSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates the settings for a specified domain.</wsdl:documentation>
+      <wsdl:input message="tns:SetRequestedDomainSettingsSoapIn" />
+      <wsdl:output message="tns:SetRequestedDomainSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDomain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes the specified domain, optionally removing data files.</wsdl:documentation>
+      <wsdl:input message="tns:DeleteDomainSoapIn" />
+      <wsdl:output message="tns:DeleteDomainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomainsWithProperties">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of domains with property set</wsdl:documentation>
+      <wsdl:input message="tns:GetAllDomainsWithPropertiesSoapIn" />
+      <wsdl:output message="tns:GetAllDomainsWithPropertiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomains">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of all domain names</wsdl:documentation>
+      <wsdl:input message="tns:GetAllDomainsSoapIn" />
+      <wsdl:output message="tns:GetAllDomainsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainCounts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the usage counts for the specified domain.</wsdl:documentation>
+      <wsdl:input message="tns:GetDomainCountsSoapIn" />
+      <wsdl:output message="tns:GetDomainCountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomainAliasesWithProperties">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all domain aliases with specific properties</wsdl:documentation>
+      <wsdl:input message="tns:GetAllDomainAliasesWithPropertiesSoapIn" />
+      <wsdl:output message="tns:GetAllDomainAliasesWithPropertiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomainAliases">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all domain aliases</wsdl:documentation>
+      <wsdl:input message="tns:GetAllDomainAliasesSoapIn" />
+      <wsdl:output message="tns:GetAllDomainAliasesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomainUsersWithProperties">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all domain aliases with specific properties</wsdl:documentation>
+      <wsdl:input message="tns:GetAllDomainUsersWithPropertiesSoapIn" />
+      <wsdl:output message="tns:GetAllDomainUsersWithPropertiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainUsers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all valid usernames for the domain, including users, aliases, and mailing lists.</wsdl:documentation>
+      <wsdl:input message="tns:GetDomainUsersSoapIn" />
+      <wsdl:output message="tns:GetDomainUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainStatistics">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the statistics for the specified domain over a period of time.</wsdl:documentation>
+      <wsdl:input message="tns:GetDomainStatisticsSoapIn" />
+      <wsdl:output message="tns:GetDomainStatisticsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomainStatistics">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the statistics for all domains over the specified period of time.</wsdl:documentation>
+      <wsdl:input message="tns:GetAllDomainStatisticsSoapIn" />
+      <wsdl:output message="tns:GetAllDomainStatisticsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrimaryDomainAdmin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves information about the primary domain administrator for the specified domain.</wsdl:documentation>
+      <wsdl:input message="tns:GetPrimaryDomainAdminSoapIn" />
+      <wsdl:output message="tns:GetPrimaryDomainAdminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPrimaryDomainAdmin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sets the specified user to be the primary domain admin of the specified domain.</wsdl:documentation>
+      <wsdl:input message="tns:SetPrimaryDomainAdminSoapIn" />
+      <wsdl:output message="tns:SetPrimaryDomainAdminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainDefaults">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the default domain settings in a DomainSettingsResult object</wsdl:documentation>
+      <wsdl:input message="tns:GetDomainDefaultsSoapIn" />
+      <wsdl:output message="tns:GetDomainDefaultsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DisableDomain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Disables a specific domain in SmarterMail.</wsdl:documentation>
+      <wsdl:input message="tns:DisableDomainSoapIn" />
+      <wsdl:output message="tns:DisableDomainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnableDomain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Re-enables a specific domain in SmarterMail.</wsdl:documentation>
+      <wsdl:input message="tns:EnableDomainSoapIn" />
+      <wsdl:output message="tns:EnableDomainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves the name and path of a domain.</wsdl:documentation>
+      <wsdl:input message="tns:GetDomainInfoSoapIn" />
+      <wsdl:output message="tns:GetDomainInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the settings for a specific domain.</wsdl:documentation>
+      <wsdl:input message="tns:GetDomainSettingsSoapIn" />
+      <wsdl:output message="tns:GetDomainSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainForwarding">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the domain forwarding configuration.</wsdl:documentation>
+      <wsdl:input message="tns:GetDomainForwardingSoapIn" />
+      <wsdl:output message="tns:GetDomainForwardingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainForwardingBlock">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns information about a specific domain forwarding block.</wsdl:documentation>
+      <wsdl:input message="tns:GetDomainForwardingBlockSoapIn" />
+      <wsdl:output message="tns:GetDomainForwardingBlockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainForwardingBlockByTargetAddress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns information about a specific domain forwarding block given a target IP.</wsdl:documentation>
+      <wsdl:input message="tns:GetDomainForwardingBlockByTargetAddressSoapIn" />
+      <wsdl:output message="tns:GetDomainForwardingBlockByTargetAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDomainForwardingBlock">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates the target address and domains in a specific domain forwarding block.</wsdl:documentation>
+      <wsdl:input message="tns:SetDomainForwardingBlockSoapIn" />
+      <wsdl:output message="tns:SetDomainForwardingBlockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDomainForwardingBlockByTargetAddress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Updates the domains in a domain forwarding block forwarding to a specific target IP.</wsdl:documentation>
+      <wsdl:input message="tns:SetDomainForwardingBlockByTargetAddressSoapIn" />
+      <wsdl:output message="tns:SetDomainForwardingBlockByTargetAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDomainForwardingBlock">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Adds a domain forwarding block.</wsdl:documentation>
+      <wsdl:input message="tns:AddDomainForwardingBlockSoapIn" />
+      <wsdl:output message="tns:AddDomainForwardingBlockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDomainForwardingBlock">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes a domain forwarding block.</wsdl:documentation>
+      <wsdl:input message="tns:DeleteDomainForwardingBlockSoapIn" />
+      <wsdl:output message="tns:DeleteDomainForwardingBlockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDomainForwardBlockByTargetAddress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes a domain forwarding block by the target IP Address.</wsdl:documentation>
+      <wsdl:input message="tns:DeleteDomainForwardBlockByTargetAddressSoapIn" />
+      <wsdl:output message="tns:DeleteDomainForwardBlockByTargetAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDomainArchiveRule">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Adds a request item to be migrated to a specified mailbox.</wsdl:documentation>
+      <wsdl:input message="tns:SetDomainArchiveRuleSoapIn" />
+      <wsdl:output message="tns:SetDomainArchiveRuleSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="svcDomainAdminSoap" type="tns:svcDomainAdminSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddDomain">
+      <soap:operation soapAction="http://tempuri.org/AddDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDomainEx">
+      <soap:operation soapAction="http://tempuri.org/AddDomainEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDomainNameAndPath">
+      <soap:operation soapAction="http://tempuri.org/UpdateDomainNameAndPath" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDomainKeysCert">
+      <soap:operation soapAction="http://tempuri.org/GenerateDomainKeysCert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainKeysCert">
+      <soap:operation soapAction="http://tempuri.org/GetDomainKeysCert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameDomain">
+      <soap:operation soapAction="http://tempuri.org/RenameDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReloadDomain">
+      <soap:operation soapAction="http://tempuri.org/ReloadDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDomain">
+      <soap:operation soapAction="http://tempuri.org/UpdateDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestedDomainDefaults">
+      <soap:operation soapAction="http://tempuri.org/GetRequestedDomainDefaults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestedDomainSettings">
+      <soap:operation soapAction="http://tempuri.org/GetRequestedDomainSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRequestedDomainDefaults">
+      <soap:operation soapAction="http://tempuri.org/SetRequestedDomainDefaults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRequestedDomainSettings">
+      <soap:operation soapAction="http://tempuri.org/SetRequestedDomainSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDomain">
+      <soap:operation soapAction="http://tempuri.org/DeleteDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomainsWithProperties">
+      <soap:operation soapAction="http://tempuri.org/GetAllDomainsWithProperties" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomains">
+      <soap:operation soapAction="http://tempuri.org/GetAllDomains" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainCounts">
+      <soap:operation soapAction="http://tempuri.org/GetDomainCounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomainAliasesWithProperties">
+      <soap:operation soapAction="http://tempuri.org/GetAllDomainAliasesWithProperties" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomainAliases">
+      <soap:operation soapAction="http://tempuri.org/GetAllDomainAliases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomainUsersWithProperties">
+      <soap:operation soapAction="http://tempuri.org/GetAllDomainUsersWithProperties" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainUsers">
+      <soap:operation soapAction="http://tempuri.org/GetDomainUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainStatistics">
+      <soap:operation soapAction="http://tempuri.org/GetDomainStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomainStatistics">
+      <soap:operation soapAction="http://tempuri.org/GetAllDomainStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrimaryDomainAdmin">
+      <soap:operation soapAction="http://tempuri.org/GetPrimaryDomainAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPrimaryDomainAdmin">
+      <soap:operation soapAction="http://tempuri.org/SetPrimaryDomainAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainDefaults">
+      <soap:operation soapAction="http://tempuri.org/GetDomainDefaults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisableDomain">
+      <soap:operation soapAction="http://tempuri.org/DisableDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnableDomain">
+      <soap:operation soapAction="http://tempuri.org/EnableDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainInfo">
+      <soap:operation soapAction="http://tempuri.org/GetDomainInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainSettings">
+      <soap:operation soapAction="http://tempuri.org/GetDomainSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainForwarding">
+      <soap:operation soapAction="http://tempuri.org/GetDomainForwarding" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainForwardingBlock">
+      <soap:operation soapAction="http://tempuri.org/GetDomainForwardingBlock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainForwardingBlockByTargetAddress">
+      <soap:operation soapAction="http://tempuri.org/GetDomainForwardingBlockByTargetAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDomainForwardingBlock">
+      <soap:operation soapAction="http://tempuri.org/SetDomainForwardingBlock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDomainForwardingBlockByTargetAddress">
+      <soap:operation soapAction="http://tempuri.org/SetDomainForwardingBlockByTargetAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDomainForwardingBlock">
+      <soap:operation soapAction="http://tempuri.org/AddDomainForwardingBlock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDomainForwardingBlock">
+      <soap:operation soapAction="http://tempuri.org/DeleteDomainForwardingBlock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDomainForwardBlockByTargetAddress">
+      <soap:operation soapAction="http://tempuri.org/DeleteDomainForwardBlockByTargetAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDomainArchiveRule">
+      <soap:operation soapAction="http://tempuri.org/SetDomainArchiveRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="svcDomainAdminSoap12" type="tns:svcDomainAdminSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddDomain">
+      <soap12:operation soapAction="http://tempuri.org/AddDomain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDomainEx">
+      <soap12:operation soapAction="http://tempuri.org/AddDomainEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDomainNameAndPath">
+      <soap12:operation soapAction="http://tempuri.org/UpdateDomainNameAndPath" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateDomainKeysCert">
+      <soap12:operation soapAction="http://tempuri.org/GenerateDomainKeysCert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainKeysCert">
+      <soap12:operation soapAction="http://tempuri.org/GetDomainKeysCert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameDomain">
+      <soap12:operation soapAction="http://tempuri.org/RenameDomain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReloadDomain">
+      <soap12:operation soapAction="http://tempuri.org/ReloadDomain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDomain">
+      <soap12:operation soapAction="http://tempuri.org/UpdateDomain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestedDomainDefaults">
+      <soap12:operation soapAction="http://tempuri.org/GetRequestedDomainDefaults" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestedDomainSettings">
+      <soap12:operation soapAction="http://tempuri.org/GetRequestedDomainSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRequestedDomainDefaults">
+      <soap12:operation soapAction="http://tempuri.org/SetRequestedDomainDefaults" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRequestedDomainSettings">
+      <soap12:operation soapAction="http://tempuri.org/SetRequestedDomainSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDomain">
+      <soap12:operation soapAction="http://tempuri.org/DeleteDomain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomainsWithProperties">
+      <soap12:operation soapAction="http://tempuri.org/GetAllDomainsWithProperties" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomains">
+      <soap12:operation soapAction="http://tempuri.org/GetAllDomains" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainCounts">
+      <soap12:operation soapAction="http://tempuri.org/GetDomainCounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomainAliasesWithProperties">
+      <soap12:operation soapAction="http://tempuri.org/GetAllDomainAliasesWithProperties" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomainAliases">
+      <soap12:operation soapAction="http://tempuri.org/GetAllDomainAliases" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomainUsersWithProperties">
+      <soap12:operation soapAction="http://tempuri.org/GetAllDomainUsersWithProperties" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainUsers">
+      <soap12:operation soapAction="http://tempuri.org/GetDomainUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainStatistics">
+      <soap12:operation soapAction="http://tempuri.org/GetDomainStatistics" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDomainStatistics">
+      <soap12:operation soapAction="http://tempuri.org/GetAllDomainStatistics" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrimaryDomainAdmin">
+      <soap12:operation soapAction="http://tempuri.org/GetPrimaryDomainAdmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPrimaryDomainAdmin">
+      <soap12:operation soapAction="http://tempuri.org/SetPrimaryDomainAdmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainDefaults">
+      <soap12:operation soapAction="http://tempuri.org/GetDomainDefaults" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisableDomain">
+      <soap12:operation soapAction="http://tempuri.org/DisableDomain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnableDomain">
+      <soap12:operation soapAction="http://tempuri.org/EnableDomain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetDomainInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainSettings">
+      <soap12:operation soapAction="http://tempuri.org/GetDomainSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainForwarding">
+      <soap12:operation soapAction="http://tempuri.org/GetDomainForwarding" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainForwardingBlock">
+      <soap12:operation soapAction="http://tempuri.org/GetDomainForwardingBlock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomainForwardingBlockByTargetAddress">
+      <soap12:operation soapAction="http://tempuri.org/GetDomainForwardingBlockByTargetAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDomainForwardingBlock">
+      <soap12:operation soapAction="http://tempuri.org/SetDomainForwardingBlock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDomainForwardingBlockByTargetAddress">
+      <soap12:operation soapAction="http://tempuri.org/SetDomainForwardingBlockByTargetAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDomainForwardingBlock">
+      <soap12:operation soapAction="http://tempuri.org/AddDomainForwardingBlock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDomainForwardingBlock">
+      <soap12:operation soapAction="http://tempuri.org/DeleteDomainForwardingBlock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDomainForwardBlockByTargetAddress">
+      <soap12:operation soapAction="http://tempuri.org/DeleteDomainForwardBlockByTargetAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDomainArchiveRule">
+      <soap12:operation soapAction="http://tempuri.org/SetDomainArchiveRule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="svcDomainAdmin">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web service handles all functions dealing with domains.</wsdl:documentation>
+    <wsdl:port name="svcDomainAdminSoap" binding="tns:svcDomainAdminSoap">
+      <soap:address location="http://merrick.safesecureweb.com/Services/svcDomainAdmin.asmx" />
+    </wsdl:port>
+    <wsdl:port name="svcDomainAdminSoap12" binding="tns:svcDomainAdminSoap12">
+      <soap12:address location="http://merrick.safesecureweb.com/Services/svcDomainAdmin.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

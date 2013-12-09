@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fsmon>
+	<config>
+		<!-- <configitem name="NAME" value="VALUE" /> -->		
+	</config>
+	<watchrules>
+		<!--<watchrule name="ExampleWatchRule" enabled="true" watchdir="C:\MyWatchDir" Includesubdir="true|false" filter="*.*">
+			<watchitem name="ExampleWatchItem" oncreate="true|false" ondelete="true|false" onchanged="true|false" onrename="true|false">
+				<matchcondition context="filename|filehash|filecontent" type="regex|string">[MATCHTYPE_CONTENT]</matchcondition>
+				<matchcondition context="filename|filehash|filecontent" type="regex|string">[MATCHTYPE_CONTENT]</matchcondition>
+				<matchcondition context="filename|filehash|filecontent" type="regex|string">[MATCHTYPE_CONTENT]</matchcondition>
+				<action type="move|copy|delete|quarantine|replace|email|command" />
+				<action type="copy" destinationpath="C:\MyDestinationPath" />
+				<action type="delete" takebackup="true|false" />
+				<action type="quarantine" />				
+				<action type="replace" findtype="string|regex" find="StringOrRegexMatch" replace="MyReplacedText" takebackup="true|false" />
+				<action type="email" smtpserver="" smtpuser="" smtppass="" emailto="" emailfrom=""/>
+				<action type="command" path="" command="" />
+			</watchitem>			
+		</watchrule>-->
+		<watchrule name="ExampleWatchRule" enabled="true" watchdir="C:\watchtest" includesubdir="true" filter="*.*">
+			<watchitem name="ExampleWatchItem" oncreate="true" ondelete="false" onchanged="false" onrename="true">
+				<matchcondition context="filename" type="regex">.*\.exe</matchcondition>				
+				<action type="move|copy|delete|quarantine|replace|email|command|log" />
+				<action type="copy" destinationpath="C:\MyDestinationPath" />
+				<action type="delete" takebackup="true|false" />
+				<action type="quarantine" />				
+				<action type="replace" findtype="string|regex" find="StringOrRegexMatch" replace="MyReplacedText" takebackup="true|false" />
+				<action type="email" smtpserver="" smtpuser="" smtppass="" emailto="" emailfrom=""/>
+				<action type="command" path="" command="" />
+				<action type="log" />
+			</watchitem>			
+		</watchrule>
+	</watchrules>
+</fsmon>

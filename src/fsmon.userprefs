@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="fsmon\Program.cs">
+    <Files>
+      <File FileName="fsmon\Fsmon.cs" Line="701" Column="15" />
+      <File FileName="fsmon\Program.cs" Line="40" Column="5" />
+      <File FileName="fsmon\Fswatcher.cs" Line="89" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

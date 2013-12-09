@@ -1,0 +1,5 @@
+C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug\fsmon.exe
+C:\Users\administrator\Documents\Projects\fsmon\fsmon\bin\Debug\fsmon.pdb
+C:\Users\administrator\Documents\Projects\fsmon\fsmon\obj\x86\Debug\fsmon.exe
+C:\Users\administrator\Documents\Projects\fsmon\fsmon\obj\x86\Debug\fsmon.pdb
+C:\Users\administrator\Documents\Projects\fsmon\fsmon\obj\x86\Debug\fsmon.csprojResolveAssemblyReference.cache
